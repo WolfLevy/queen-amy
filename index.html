@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Queen Amy</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background-color: #fafafa;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='80' viewBox='0 0 120 80'%3E%3Cpath fill='none' stroke='%23FFD700' stroke-width='2' d='M30,60 L30,40 L40,30 L50,40 L60,30 L70,40 L80,30 L90,40 L90,60 L30,60 Z'/%3E%3Cpath fill='none' stroke='%23FFD700' stroke-width='2' d='M40,30 L40,20 L45,25 L50,15 L55,25 L60,15 L65,25 L70,15 L75,25 L80,20 L80,30'/%3E%3C/svg%3E");
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .header {
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #4a4a4a;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 800px;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .profile-img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .button {
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: #4a4a4a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #333;
+    }
+
+    .about-content {
+      display: none;
+      margin-top: 30px;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      line-height: 1.6;
+      max-width: 600px;
+    }
+
+    .about-content p {
+      margin-bottom: 15px;
+    }
+
+    .about-content a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .about-content a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Queen Amy</h1>
+  </div>
+
+  <div class="main-content">
+    <img src="/api/placeholder/400/320" alt="Amy Niles Gonzalez" class="profile-img">
+    <button class="button" id="aboutButton">About Amy</button>
+
+    <div class="about-content" id="aboutContent">
+      <p><strong>Amy Niles Gonzalez</strong></p>
+      <p>President at <a href="https://theorg.com/org/blueprint-interactive">Blueprint Interactive</a></p>
+      
+      <p>Amy Niles Gonzalez is Founder and President of Blueprint, a digital strategy, marketing and design firm. A veteran entrepreneur, interactive strategist and management consultant, Amy works with numerous clients on issue advocacy and digital campaigns that leverage data and modeling alongside creative and messaging. Amy was selected as 2013 CampaignTech Innovator and one of the 2014 Influencers 50 by Campaigns and Elections magazine.</p>
+      
+      <p>Prior to Blueprint, Amy served as President of MSHC Partners, Inc., where she managed the overall business as well as led the interactive division. Under her leadership, MSHC's interactive division grew from three employees to more than twenty, generated record profits and won numerous awards, including the coveted Yahoo! "Big Idea Chair Award."</p>
+      
+      <p>Previously, Amy founded and managed the Interactive Marketing group of Capital One, one of the nation's largest and most diversified financial services companies. She also co-founded Strong Numbers -- a software firm -- that was recognized as a Top 10 e-Commerce Company in Massachusetts and a finalist in Massachusetts Institute of Technology's $50K Entrepreneurship Competition. Amy has held management consulting positions at The Boston Consulting Group and McKinsey & Company.</p>
+      
+      <p>Amy holds a Bachelor of Arts from the University of Pennsylvania and a Masters of Business Administration from the MIT Sloan School of Management.</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('aboutButton').addEventListener('click', function() {
+      const aboutContent = document.getElementById('aboutContent');
+      if (aboutContent.style.display === 'block') {
+        aboutContent.style.display = 'none';
+      } else {
+        aboutContent.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
